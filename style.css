@@ -24,7 +24,9 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+img{
+width: 90vw;
+}
 h1 {
     color: #d3c1a1;
     font-size: 3rem;
