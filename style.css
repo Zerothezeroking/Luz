@@ -1,0 +1,116 @@
+body {
+    color: #d3c1a1;
+    background: #1f130a;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.Texto {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.Texto2{
+    max-width: 50rem;
+}
+
+.imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #d3c1a1;
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 7rem;
+}
+
+.present {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: 10rem;
+}
+
+.container {
+    position: relative;
+    width: 30rem;
+    height: 20rem;
+    perspective: 1000px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.caixa {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.parte {
+    width: 50%;
+    height: 100%;
+    background: #6e6143;
+    transition: transform 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    box-sizing: border-box;
+    border: 2px solid #222;
+}
+
+.esquerda {
+    border-right: 1px solid #000;
+    transform-origin: left;
+}
+
+.direita {
+    border-left: 1px solid #000;
+    transform-origin: right;
+}
+
+input:checked~.caixa .esquerda {
+    transform: rotateY(-90deg);
+}
+
+input:checked~.caixa .direita {
+    transform: rotateY(90deg);
+}
+
+.conteudo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://via.placeholder.com/300x200') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: 1;
+}
+
+input:checked~.conteudo {
+    opacity: 1;
+}
